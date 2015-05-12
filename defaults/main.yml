@@ -1,0 +1,14 @@
+---
+# defaults file for prometheus_exporter_machine
+
+
+prometheus_exporter_machine_build_folder: /tmp/prometheus_exporter_machine
+prometheus_exporter_machine_user: prometheus_exporter_machine
+prometheus_exporter_machine_group: prometheus_exporter_machine
+prometheus_exporter_machine_service_name: prometheus_exporter_machine
+prometheus_exporter_machine_repo: https://github.com/prometheus/node_exporter
+
+prometheus_exporter_machine_install_dir: /opt/prometheus_exporter_machine
+prometheus_exporter_machine_conf_dir: /etc/prometheus_exporter_machine
+prometheus_exporter_machine_log_dir: /var/log/prometheus_exporter_machine
+

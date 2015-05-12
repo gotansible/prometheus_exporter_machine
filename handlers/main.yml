@@ -1,0 +1,7 @@
+---
+# handlers file for prometheus_exporter_machine
+
+- name: restart prometheus exporter machine
+  runit: name={{ prometheus_exporter_machine_service_name }} state=up timeout=9 action=reload
+
+

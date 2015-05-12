@@ -1,0 +1,12 @@
+---
+
+- name: install dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+    - unzip
+    - curl
+    - gzip
+    - git
+    - mercurial
+  when: ansible_os_family == 'Debian'
+
