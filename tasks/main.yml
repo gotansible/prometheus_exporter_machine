@@ -6,7 +6,7 @@
 - name: install machine exporter
   include: install.yml
 
-- name: setup prometheus as runit service and start it
+- name: setup machine exporter as runit service and start it
   runit:
     name: "{{ prometheus_exporter_machine_service_name }}"
     enabled: true
