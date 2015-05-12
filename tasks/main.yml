@@ -8,10 +8,10 @@
 
 - name: setup machine exporter as runit service and start it
   runit:
-    name: "{{ prometheus_exporter_machine_service_name }}"
+    name: "{{ prometheus_machine_service_name }}"
     enabled: true
     state: up
     timeout: 9
-    user: "{{ prometheus_exporter_machine_user }}"
-    command: "{{ prometheus_exporter_machine_install_dir }}/node_exporter collectors.enabled=attributes,diskstats,filesystem,loadavg,meminfo,stat,textfile,time,netdev,netstat,runit,lastlogin"
+    user: "{{ prometheus_machine_user }}"
+    command: "{{ prometheus_machine_install_dir }}/node_exporter collectors.enabled=attributes,diskstats,filesystem,loadavg,meminfo,stat,textfile,time,netdev,netstat,runit,lastlogin"
 

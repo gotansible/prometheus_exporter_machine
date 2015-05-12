@@ -2,4 +2,4 @@
 - hosts: all
   sudo: true
   roles:
-    - { role: prometheus_exporter_machine }
+    - { role: prometheus_machine }
