@@ -10,5 +10,5 @@
     state: up
     timeout: 9
     user: "{{ prometheus_machine_user }}"
-    command: "{{ prometheus_machine_install_dir }}/node_exporter -web.listen-address={{ prometheus_listen_address }} -collectors.enabled={{ prometheus_machine_collectors }}"
+    command: "{{ prometheus_machine_install_dir }}/node_exporter -web.listen-address={{ prometheus_machine_listen_address }} -collectors.enabled={{ prometheus_machine_collectors }}"
   register: prometheus_machine_service_status
