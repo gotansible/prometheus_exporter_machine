@@ -2,7 +2,7 @@
 # handlers file for prometheus_machine
 
 - name: restart prometheus machine
-  runit: name={{ prometheus_machine_service_name }} state=up timeout=9 action=reload
+  runit: name={{ prometheus_machine_service_name }} state=up timeout=9 action=restart
   when: not prometheus_machine_service_status.restarted
 
 

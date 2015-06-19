@@ -1,0 +1,11 @@
+---
+
+- name: setup machine exporter as runit service and start it
+  runit:
+    name: "{{ prometheus_machine_service_name }}"
+    enabled: true
+    state: up
+    timeout: 9
+    user: "{{ prometheus_machine_user }}"
+    command: "{{ prometheus_machine_install_dir }}/node_exporter -web.listen-address={{ prometheus_machine_port }} -collectors.enabled={{ prometheus_machine_collectors }}
+  register: prometheus_machine_service_status
