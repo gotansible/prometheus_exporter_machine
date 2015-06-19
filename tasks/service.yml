@@ -1,6 +1,9 @@
 ---
 
 - name: setup machine exporter as runit service and start it
+  tags:
+    - config # since there's no config, just the startup parms
+    - service
   runit:
     name: "{{ prometheus_machine_service_name }}"
     enabled: true
