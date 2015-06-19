@@ -12,6 +12,6 @@ prometheus_machine_install_dir: /opt/prometheus_machine
 prometheus_machine_conf_dir: /etc/prometheus_machine
 prometheus_machine_log_dir: /var/log/prometheus_machine
 
-prometheus_machine_port: 9100
+prometheus_machine_port: 11200
 prometheus_machine_collectors: attributes,diskstats,filesystem,loadavg,meminfo,stat,textfile,time,netdev,netstat,runit,lastlogin
  
