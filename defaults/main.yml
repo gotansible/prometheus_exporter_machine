@@ -6,7 +6,7 @@ prometheus_machine_build_folder: /tmp/prometheus_machine
 prometheus_machine_user: prometheus_machine
 prometheus_machine_group: prometheus_machine
 prometheus_machine_service_name: prometheus_machine
-prometheus_machine_repo: https://github.com/prometheus/node_exporter
+prometheus_machine_repo: "https://github.com/prometheus/node_exporter"
 
 prometheus_machine_install_dir: /opt/prometheus_machine
 prometheus_machine_conf_dir: /etc/prometheus_machine

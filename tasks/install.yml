@@ -21,6 +21,12 @@
   git:
     repo={{ prometheus_machine_repo }}
     dest={{ prometheus_machine_build_folder }}
+    version=master
+    depth=1
+    update=yes
+    accept_hostkey=yes
+    force=yes
+    recursive=yes
 
 - name: make prometheus
   command: make 
