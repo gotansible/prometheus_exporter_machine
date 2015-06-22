@@ -17,6 +17,12 @@
   stat: path={{ prometheus_machine_install_dir }}/node_exporter
   register: binary_file
 
+- name: build - touch gitconfig
+  file:
+    state=touch
+    path=/tmp/.emptygitconfig
+  changed_when: False
+
 - name: install - checkout prometheus from github.com
   git:
     repo={{ prometheus_machine_repo }}
@@ -27,6 +33,8 @@
     accept_hostkey=yes
     force=yes
     recursive=yes
+  environment:
+    GIT_CONFIG: /tmp/.emptygitconfig
 
 - name: make prometheus
   command: make 
